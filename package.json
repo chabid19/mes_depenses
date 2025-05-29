@@ -6,7 +6,8 @@
   "license": "UNLICENSED",
   "scripts": {
     "start": "node bin/server.js",
-    "build": "node ace build",
+    "build": "node ace build --production",
+    "postbuild": "cp -R bin build/bin && cp -R start build/start && cp -R config build/config",
     "dev": "node ace serve --hmr",
     "test": "node ace test",
     "lint": "eslint .",
